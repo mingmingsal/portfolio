@@ -1,8 +1,8 @@
-import photo1 from '../assets/aleksandr-popov-3InMDrsuYrk-unsplash.jpg' 
-import photo2 from "../assets/cheng-feng-4pTY4ty7jXM-unsplash.jpg"
-import photo3 from "../assets/jezael-melgoza-layMbSJ3YOE-unsplash.jpg"
-import photo4 from "../assets/jr-korpa-9XngoIpxcEo-unsplash.jpg"
-import photo5 from "../assets/kevin-laminto-7PqRZK6rbaE-unsplash.jpg"
+import photo1 from '../assets/aleksandr-popov-3InMDrsuYrk-unsplash.webp' 
+import photo2 from "../assets/cheng-feng-4pTY4ty7jXM-unsplash.webp"
+import photo3 from "../assets/jezael-melgoza-layMbSJ3YOE-unsplash.webp"
+import photo4 from "../assets/jr-korpa-9XngoIpxcEo-unsplash.webp"
+import photo5 from "../assets/kevin-laminto-7PqRZK6rbaE-unsplash.webp"
 export const projects = [
     {
         id:0,

@@ -12,27 +12,38 @@ const Parallax = () => {
     };
 
     return (
-        <div >
+        <div className='parralaxContainer'>
             <ul className='image-track' onScroll={getScrollPosition}>
 
                 {
                     projects.map((project) => {
-                        return <ParallaxImage key={project.id} imageUrl={project.image} />
-                        
+                        return <ParallaxImage key={project.id} imageUrl={project.image} projectTitle={project.name} projectDescription={project.description} />
+
                     })
                 }
             </ul>
 
         </div>
     )
-    function ParallaxImage({ imageUrl }) {
+    function ParallaxImage({ imageUrl, projectTitle, projectDescription }) {
+        const [isShown, setIsShown] = useState(false);
         return (
             <li>
-                <img className='parallax-image' src={imageUrl} style={{objectPosition:`${scrollLeft}% 50%`}}/>
+                <figure onMouseEnter={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}>
+                    <img className='parallax-image' src={imageUrl} style={{ objectPosition: `${scrollLeft}% 50%` }} />
+                    <div className={`shadow ${isShown ? 'showVis': 'showHide'}`}>
+                        <figcaption className='title'>{projectTitle}</figcaption>
+                        <figcaption className='description'>{projectDescription}</figcaption>
+                    </div>
+
+                </figure>
+
             </li>
         )
-    
+
     }
+
 }
 
 export default Parallax
